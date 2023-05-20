@@ -18,8 +18,7 @@ const Home = () => {
   const [searchText, setSearchText] = useState('')
   const [searchResult, setSearchResult] = useState(null)
   const [searchTimeOut, setSearchTimeOut] = useState(null)
-
-  useEffect(() => {
+  
     const fetchPosts = async () => {
       setLoading(true);
 
@@ -42,9 +41,10 @@ const Home = () => {
         setLoading(false);
       }
     }
-
-    fetchPosts()
-  }, [])
+    
+ useEffect(() => {
+    fetchPosts();
+  }, []);
 
   const handleSearchChange = (e) => {
     clearTimeout(searchTimeOut);
