@@ -20,7 +20,7 @@ const CreatePost = () => {
     if (form.prompt) {
       try {
         setGeneratingImg(true);
-        const response = await fetch(https://server-dall-e.vercel.app/api/v1/dalle', {
+        const response = await fetch('https://server-dall-e.vercel.app/api/v1/dalle', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -57,8 +57,8 @@ const CreatePost = () => {
           headers: {
             'Content-type': 'application/json',
           },
-          body: JSON.stringify(form),
-        })
+          body: JSON.stringify({ ...form }),
+        });
 
         await response.json();
         navigate('/')
