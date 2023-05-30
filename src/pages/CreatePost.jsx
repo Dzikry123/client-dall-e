@@ -83,8 +83,15 @@ const CreatePost = () => {
         <h1 className="font-extrabold text-[#222328] text-[32px]">Create</h1>
         <p className="mt-2 text-[#666e75] text-[14px] max-w-[500px]">Generate an imaginative image through DALL-E AI and share it with the community</p>
       </div>
+    
+    <div className=' mt-20 p-4 rounded-md bg-[#ebe9e9]'>
+        <h1 className='font-bold font-mono text-[#fe0000]'>Jangan Refresh Page ini !!!</h1>
+        <h4 className='text-sm font-mono '>
+          Jika terjadi error, silahkan paste kembali link ini & reload page nya <a href='https://client-dall-e.vercel.app/' className='text-blue-800 font-bold'>https://client-dall-e.vercel.app/</a>
+        </h4>
+      </div>
 
-      <form className="mt-16 max-w-3xl" onSubmit={handleSubmit}>
+      <form className="mt-10 max-w-3xl" onSubmit={handleSubmit}>
         <div className="flex flex-col gap-5">
           <FormField
             labelName="Your Name"
@@ -105,6 +112,22 @@ const CreatePost = () => {
             isSurpriseMe
             handleSurpriseMe={handleSurpriseMe}
           />
+             
+           <div className=' p-4 rounded-md bg-[#ebe9e9]'>
+            <h1 className='font-bold font-mono text-[#fe0000]'>Warning !!!</h1>
+            <h4 className='text-sm font-mono '>Instruksi Penggunaan Dall-E / Stable Diffusion 2.0</h4>
+
+            <p className='text-sm bg-gray-600 p-3 rounded-lg font-mono text-white mt-4 mb-4'>sebelumnya mohon maaf atas ketidaknyamanannya karena ada beberapa prompt yang tidak bisa dijalankan karena keterbasatan aplikasi, berikut tata cara penggunaan AI Dall-E :</p >
+            <ul className='mt-4 mb-10 list-disc px-4'>
+              <li>Minimal kata yang digunakan didalam <span className='text-blue-700 font-bold'>Prompt</span> adalah 4-5 kata</li>
+              <li>Ada beberapa aktor, benda, atau tempat yang tidak bisa dimunculkan karena keterbatasan sumber</li>
+              <li>Jadi jika terjadi <span className='text-[#fe0000] font-bold'>Error</span> saat kalian men-generate, silahkan paste link ini di url kalian & reload kembali website nya <a href='https://client-dall-e.vercel.app/' className='text-blue-800 font-bold'>https://client-dall-e.vercel.app/</a> </li>
+              <li>Jika ingin sharing hasil gambar yang telah di generate, pastikan isi kolom <span className='text-blue-700 font-bold'>Nama</span> dan <span className='text-blue-700 font-bold'>Prompt</span> nya </li>
+            </ul>
+            <span className='font-bold'>- Dzy</span>
+
+
+          </div>
 
           <div className="relative bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-64 p-3 h-64 flex justify-center items-center">
             { form.photo ? (
